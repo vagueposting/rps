@@ -93,8 +93,6 @@ function playGame() {
         if (rounds == 4) {
             playRound()
             console.log("Game over.");
-            console.log("Final scores:");
-            checkScores()
             if (playerScore > computerScore) {
                 console.log("Player wins!");
             } else if (computerScore > playerScore) {
