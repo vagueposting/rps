@@ -1,23 +1,11 @@
-// init
-let computerChoice = 1;
-let playerChoice = 1;
-let playerScore = 0;
-let computerScore = 0;
-let computerWord = "";
-let playerWord = "";
-let rounds = 0;
+//init
+let computerChoice = 1, playerChoice = 1, playerScore = 0, computerScore = 0, 
+computerWord = "", playerWord = "", rounds = 0;
 
-// Function for choosing computer input
 function getComputerChoice(options = 3) {
     computerChoice = Math.floor(Math.random() * options) + 1
 }
 
-// Rock = 1
-// Paper = 2
-// Scissors = 3
-
-// Function for requesting player input
-// SHOULD be case-insensitive
 function getPlayerChoice() {
     let playerString = ""
     // while the input is incorrect, repeat the function
@@ -43,9 +31,6 @@ function getPlayerChoice() {
         }
     }
 
-// Function/s for checking
-
-// Shows the choice used
 function showChoice() {
     switch(computerChoice) {
         case 1:
@@ -63,28 +48,23 @@ function showChoice() {
         case 3:
             playerWord = "Scissors"; break;
     };
-    // console.log(playerWord)
     console.log(`Player choice: ${playerWord}\nComputer's Choice: ${computerWord}`)
 }
 
-// Checks the scores
 function checkScores() {
     console.log(`Scores\nPlayer: ${playerScore}\nCPU: ${computerScore}`)
 }
 
-// For if the CPU wins the round
 function computerWin() {
     showChoice(); console.log("CPU wins!"); computerScore++;
     checkScores();
 }
 
-// If Player wins the round
 function playerWin() {
     showChoice(); console.log("Player wins!"); playerScore++;
     checkScores();
 }
 
-// a single round with win conditions
 function playRound() {
     console.log(`ROUND ${rounds + 1}. Go!`)
     getComputerChoice()
@@ -108,7 +88,6 @@ function playRound() {
     }
 }
 
-// actually runs the game
 function playGame() {
     while (rounds <= 5) {
         if (rounds == 4) {
@@ -131,6 +110,7 @@ function playGame() {
         }
     }
 }
-// runs the game
+
+// end init
 
 playGame()
