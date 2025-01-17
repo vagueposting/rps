@@ -1,0 +1,128 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Mogra&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --textWhite: #F4F1DE;
+    --bgBlack: #3D405B;
+    --rock: 242, 204, 143;
+    --paper: 129, 178, 154;
+    --scissors: 224, 122, 95;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    /* styles */ color: var(--textWhite);
+    background-color: var(--bgBlack);
+    font-family: "Montserrat", serif;
+}
+
+.container {
+    flex: 1;
+    flex-direction: column;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.rock {
+    color: rgb(var(--rock));
+}
+
+.paper {
+    color: rgb(var(--paper));
+}
+
+.scissors {
+    color: rgb(var(--scissors));
+}
+
+h1 {
+    font-family: "Kablammo", serif;
+    font-size: 36pt;
+    display: flex;
+    gap: 0.5em;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2 {
+    font-family: "Mogra", serif;
+}
+
+.info {
+    display: flex;
+    gap: 1em;
+    height: 40vh;
+    margin: 0;
+}
+
+.history, .scorebox {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 20vw;
+    border: 2pt dotted var(--textWhite);
+}
+
+.history {
+    padding: 0.75em 2em;
+    flex-shrink: 0;
+}
+
+.scores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    flex-shrink: 0;
+}
+
+.scoreValue {
+    font-size: 32pt;
+}
+
+.scorebox {
+    margin: 1em 0em;
+    padding: 1em;
+}
+
+.scorebox p {
+    margin: 0;
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 1em;
+}
+
+.choices button {
+    font-size: 16pt;
+    width: 5em;
+    height: 2.5em;
+    font-family: "Mogra", serif;
+    border: 2pt dotted var(--bgBlack);
+    border-radius: 4pt;
+    cursor: pointer;
+}
+
+button#rock {
+    background-color: rgba(var(--rock),0.6);
+}
+
+button#paper {
+    background-color: rgba(var(--paper),0.6);
+}
+
+button#scissors {
+    background-color: rgba(var(--scissors),0.6);
+}
